@@ -9,11 +9,11 @@ unix2dos -- Converts DOS files to Unix and vice-versa
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 =head1 SYNOPSIS
@@ -37,8 +37,9 @@ our @EXPORT = ( "unix2dos" , "dos2unix" ) ;
 
 =head1 SUBROUTINES/METHODS
 
+=head2 unix2dos
+
   unix2dos filename(s)
-  dos2unix filename(s)
 
 =cut
 
@@ -49,6 +50,12 @@ sub unix2dos
 
   s/\n/\r\n/ && print while <>
   }
+
+=head2 dos2unix
+
+  dos2unix filename(s)
+
+=cut
 
 sub dos2unix
   {
